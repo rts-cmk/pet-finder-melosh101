@@ -17,8 +17,9 @@ const router = createBrowserRouter([
     Component: petsPage,
     loader: async () => {
       const pets = await axios.get("/api/pets");
-
-      return { pets: pets.data }
+      const user = await axios.get("/api/user/me");
+      console.log("user:", user.data);
+      return { pets: pets.data, user: user.data}
     }
   }
 ])
