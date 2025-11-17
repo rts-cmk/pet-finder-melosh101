@@ -1,0 +1,39 @@
+#root {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.animal-svg { 
+  & rect {
+    fill: var(--background-color)
+
+  }
+} 
+
+.home-my-pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  & h1 {
+    margin: 0;
+  }
+
+  & p {
+    color: light-dark(#828282, #828282);
+  }
+}
+
+.btn-skip {
+  width: 90%;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
