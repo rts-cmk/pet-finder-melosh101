@@ -9,3 +9,6 @@ export const petTable = pgTable("pets", {
   description: text(),
   image: text()
 });
+
+export type Pet = typeof petTable.$inferSelect;
+export type NewPet = typeof petTable.$inferInsert;
