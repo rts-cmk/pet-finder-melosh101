@@ -40,4 +40,13 @@ app.get("pets/:id", async (c) => {
   return c.json(pet)
 })
 
+app.get("/user/me", (c) => {
+  return c.json({
+    id: 1,
+    name: "me",
+    image: "https://storage.ulf.milasholsting.dk/pet-finder/avatars/user.jpg",
+    location: "Copenhagen, Denmark"
+  })
+})
+
 export default app
